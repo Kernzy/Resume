@@ -6,8 +6,126 @@
     <title>Keaton Burns | Resume</title>
     <link id="favicon" rel="icon" type="image/png" href="./images/icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <style>
+      body {
+        font-family: monospace;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+      }
+
+      .HeaderContainer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .HeaderName {
+        margin-left: 15px;
+      }
+
+      #coverLetter {
+        width: 70%;
+        margin: auto;
+        text-align: center;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      #mainDisplay {
+        display: none;
+        width: 85%;
+        margin: auto;
+        opacity: 0;
+        animation-name: fadeIn;
+        animation-duration: 2.5s;
+        animation-fill-mode: forwards;
+      }
+
+      .content {
+        width: 70%;
+        margin: auto;
+      }
+
+      .password {
+        padding-top: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        margin: 20px;
+      }
+
+      section {
+        padding-top: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 5px;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      section:hover {
+        background-color: black;
+        color: white;
+      }
+
+      body.old-computer {
+        background-color: black;
+        color: lime;
+      }
+
+      body.old-computer section {
+        outline: 2px solid lime;
+      }
+
+      body.old-computer section:hover {
+        background-color: lime;
+        color: black;
+        border: 2px solid lime;
+      }
+
+      .toggle-button {
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #000;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      body.old-computer .toggle-button {
+        color: lime;
+      }
+
+      .seeMore {
+        width: 80px;
+        margin: auto;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        animation: wiggle 10s infinite;
+      }
+
+      @keyframes wiggle {
+        0%, 9% { transform: rotate(0deg); }
+        2% { transform: rotate(-2deg); }
+        4% { transform: rotate(2deg); }
+        6% { transform: rotate(-2deg); }
+        8% { transform: rotate(2deg); }
+        10%, 100% { transform: rotate(0deg); }
+      }
+    </style>
   </head>
   <body>
     <header class="HeaderContainer">
@@ -95,5 +213,57 @@
       </section>
 
     </div>
+    <script>
+      window.onload = function () {
+        document.getElementById("passwordInput").focus();
+      };
+
+      var toggleButton = document.getElementById("toggleButton");
+      var body = document.body;
+
+      toggleButton.addEventListener("click", function () {
+        body.classList.toggle("old-computer");
+
+        var coverPic = document.getElementById("coverPic");
+        var currentIcon = coverPic.getAttribute("src");
+
+        var favicon = document.getElementById("favicon");
+        var currentFavicon = favicon.getAttribute("href");
+
+        if (currentIcon.includes("icon.png")) {
+          coverPic.setAttribute("src", "./images/darkMode.png");
+          favicon.setAttribute("href", "./images/darkMode.png");
+        } else {
+          coverPic.setAttribute("src", "./images/icon.png");
+          favicon.setAttribute("href", "./images/icon.png");
+        }
+
+        var icon = toggleButton.querySelector("i");
+        icon.classList.toggle("fa-sun");
+        icon.classList.toggle("fa-moon");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        function showContent() {
+          var coverLetter = document.getElementById("coverLetter");
+          var mainDisplay = document.getElementById("mainDisplay");
+          coverLetter.style.display = "none";
+          mainDisplay.style.display = "block";
+          mainDisplay.style.opacity = "1";
+        }
+
+        document.querySelector(".seeMore").addEventListener("click", showContent);
+      });
+
+      document
+        .getElementById("passwordInput")
+        .addEventListener("keyup", function (event) {
+          var coverLetter = document.getElementById("coverLetter");
+          if (event.target.value === "gemini") {
+            coverLetter.style.display = "block"; // Reveal the cover letter
+            document.getElementById("passwordContainer").style.display = "none"; // Hide the password input
+          }
+        });
+    </script>
   </body>
 </html>
