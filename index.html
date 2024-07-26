@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -263,6 +263,52 @@
             document.getElementById("passwordContainer").style.display = "none"; // Hide the password input
           }
         });
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Webcam</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video id="webcam" autoplay playsinline></video>
+    <script>
+        async function startWebcam() {
+            try {
+                const constraints = {
+                    video: {
+                        facingMode: "user"
+                    }
+                };
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                const video = document.getElementById('webcam');
+                video.srcObject = stream;
+            } catch (error) {
+                console.error('Error accessing webcam: ', error);
+            }
+        }
+
+        startWebcam();
+    </script>
+</body>
+</html>
+
     </script>
   </body>
 </html>
+ -->
