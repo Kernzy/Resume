@@ -1,131 +1,14 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keaton Burns | Resume</title>
-    <link id="favicon" rel="icon" type="image/png" href="./images/icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <style>
-      body {
-        font-family: monospace;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-      }
-
-      .HeaderContainer {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        position: relative;
-      }
-
-      .HeaderName {
-        margin-left: 15px;
-      }
-
-      #coverLetter {
-        width: 70%;
-        margin: auto;
-        text-align: center;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      #mainDisplay {
-        display: none;
-        width: 85%;
-        margin: auto;
-        opacity: 0;
-        animation-name: fadeIn;
-        animation-duration: 2.5s;
-        animation-fill-mode: forwards;
-      }
-
-      .content {
-        width: 70%;
-        margin: auto;
-      }
-
-      .password {
-        padding-top: 5px;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        margin: 20px;
-      }
-
-      section {
-        padding-top: 5px;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-bottom: 5px;
-        margin: 20px;
-        border: 2px solid black;
-        border-radius: 20px;
-        transition: background-color 0.3s, color 0.3s;
-      }
-
-      section:hover {
-        background-color: black;
-        color: white;
-      }
-
-      body.old-computer {
-        background-color: black;
-        color: lime;
-      }
-
-      body.old-computer section {
-        outline: 2px solid lime;
-      }
-
-      body.old-computer section:hover {
-        background-color: lime;
-        color: black;
-        border: 2px solid lime;
-      }
-
-      .toggle-button {
-        font-size: 20px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        color: #000;
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-
-      body.old-computer .toggle-button {
-        color: lime;
-      }
-
-      .seeMore {
-        width: 80px;
-        margin: auto;
-        text-align: center;
-        cursor: pointer;
-        position: relative;
-        display: inline-block;
-        animation: wiggle 10s infinite;
-      }
-
-      @keyframes wiggle {
-        0%, 9% { transform: rotate(0deg); }
-        2% { transform: rotate(-2deg); }
-        4% { transform: rotate(2deg); }
-        6% { transform: rotate(-2deg); }
-        8% { transform: rotate(2deg); }
-        10%, 100% { transform: rotate(0deg); }
-      }
-    </style>
+    <link id="favicon" rel="icon" type="image/png" href="./images/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
   </head>
   <body>
     <header class="HeaderContainer">
@@ -135,52 +18,75 @@
       </button>
     </header>
 
-    <div id="passwordContainer" style="text-align:center; padding: 40px; display: block">
-      <input id="passwordInput" type="password" style="margin: 60px; padding: 5px;"/>
+    <div
+      id="passwordContainer"
+      style="text-align: center; padding: 40px; display: block"
+    >
+      <input
+        id="passwordInput"
+        type="password"
+        style="margin: 60px; padding: 5px"
+      />
     </div>
-    
-    <div id="coverLetter" style="text-align:center; display:none;">
-      <img id="coverPic" src="./images/icon.png" style="border-radius: 30px; margin: 15px; cursor:none;">
-      <section style="padding: 40px; text-align: center; cursor:none;">
+
+    <div id="coverLetter" style="text-align: center; display: none">
+      <img
+        id="coverPic"
+        src="./images/icon.png"
+        style="border-radius: 30px; margin: 15px; cursor: none"
+      />
+      <section style="padding: 40px; text-align: center; cursor: none">
         ...cover letter to come
       </section>
 
-      <section class="seeMore">
-        Enter
-      </section>
+      <section class="seeMore">Enter</section>
     </div>
 
     <div id="mainDisplay" style="display: none">
-    
       <section>
         <h1>About Me.</h1>
         <p>
-          I've spent a good part of my life developing skills to become the go-to person when it comes to creative problem-solving.
-          I do my best work under creative restraints and love to push the boundaries of what is perceived as "possible".
-          Nothing beats the "did that just work?" feeling you get when creating!
+          I've spent a good part of my life developing skills to become the
+          go-to person when it comes to creative problem-solving. I do my best
+          work under creative restraints and love to push the boundaries of what
+          is perceived as "possible". Nothing beats the "did that just work?"
+          feeling you get when creating!
         </p>
       </section>
-      
+
       <section>
         <h1>Work History.</h1>
         <ul>
-          <li><strong>Gemini Inc. | Layout Help Desk | June 2018 - Present</strong>
+          <li>
+            <strong
+              >Gemini Inc. | Layout Help Desk | June 2018 - Present</strong
+            >
             <ul>
               <li>Design Consultant for internal and external customers.</li>
               <li>Automation and Continuous Improvement enthusiast.</li>
-              <li>Involvement in 3 <i>"Improvements of the Month"</i> awards.</li>
+              <li>
+                Involvement in 3 <i>"Improvements of the Month"</i> awards.
+              </li>
               <li>Designer of the Sheron Winel Award.</li>
             </ul>
           </li>
-          <li><strong>Stan's Main Street | General Manager | May 2014 - October 2017</strong>
+          <li>
+            <strong
+              >Stan's Main Street | General Manager | May 2014 - October
+              2017</strong
+            >
             <ul>
               <li>Ran day-to-day restaurant operations.</li>
               <li>Conducted interviews and managed 25+ staff members.</li>
               <li>Booked musical acts and planned community fundraisers.</li>
-              <li>Implemented Lean practices to increase productivity and customer satisfaction.</li>
+              <li>
+                Implemented Lean practices to increase productivity and customer
+                satisfaction.
+              </li>
             </ul>
           </li>
-          <li><strong>Freelance Designer | 2010 - Present</strong>
+          <li>
+            <strong>Freelance Designer | 2010 - Present</strong>
             <ul>
               <li>Graphic Design</li>
               <li>Motion Graphics</li>
@@ -190,7 +96,7 @@
           </li>
         </ul>
       </section>
-      
+
       <section>
         <h1>Projects.</h1>
         <ul>
@@ -201,17 +107,18 @@
           <li>Augusta National Golf Club - Champions Locker room Locker.</li>
         </ul>
       </section>
-      
+
       <section>
         <h1>Fun Facts.</h1>
         <ul>
           <li>I am scuba certified.</li>
           <li>I've been to over 250 Dallas Stars games.</li>
           <li>No one has ever been successful at giving me a low-five.</li>
-          <li>My favorite color is <span style="color: #ff4f00;">#ff4f00</span>.</li>
+          <li>
+            My favorite color is <span style="color: #ff4f00">#ff4f00</span>.
+          </li>
         </ul>
       </section>
-
     </div>
     <script>
       window.onload = function () {
@@ -252,10 +159,13 @@
           mainDisplay.style.opacity = "1";
         }
 
-        document.querySelector(".seeMore").addEventListener("click", showContent);
+        document
+          .querySelector(".seeMore")
+          .addEventListener("click", showContent);
       });
 
-      document.getElementById("passwordInput")
+      document
+        .getElementById("passwordInput")
         .addEventListener("keyup", function (event) {
           var coverLetter = document.getElementById("coverLetter");
           if (event.target.value === "gemini") {
@@ -263,52 +173,6 @@
             document.getElementById("passwordContainer").style.display = "none"; // Hide the password input
           }
         });
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Screen Webcam</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
-</head>
-<body>
-    <video id="webcam" autoplay playsinline></video>
-    <script>
-        async function startWebcam() {
-            try {
-                const constraints = {
-                    video: {
-                        facingMode: "user"
-                    }
-                };
-                const stream = await navigator.mediaDevices.getUserMedia(constraints);
-                const video = document.getElementById('webcam');
-                video.srcObject = stream;
-            } catch (error) {
-                console.error('Error accessing webcam: ', error);
-            }
-        }
-
-        startWebcam();
-    </script>
-</body>
-</html>
-
     </script>
   </body>
 </html>
- -->
