@@ -95,6 +95,7 @@
       right: 15px;
       top: 50%;
       transform: translateY(-50%);
+      display:inline-block;
     }
 
     body.old-computer .toggle-button {
@@ -111,6 +112,43 @@
       animation: wiggle 10s infinite;
     }
     
+    .styled-download-button {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: monospace;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    .styled-download-button:hover {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+    }
+
+    body.old-computer .styled-download-button {
+    background-color: lime;
+    outline: 2px solid lime;
+    border: 2px solid lime;
+    color: black;
+    }
+
+    body.old-computer .styled-download-button:hover {
+    background-color: black;
+    color: lime;
+    border: 1px solid lime;
+    }
+
+
     @keyframes wiggle {
       0%, 9% {
         transform: rotate(0deg);
@@ -142,11 +180,8 @@
   </header>
 
   <div id="passwordContainer" style="text-align: center; padding: 40px; display: block">
-    <h2 id="passwordLabel">(desktop)Please enter password...</h2>
+    <h2 id="passwordLabel">Please enter password...</h2>
     <input id="passwordInput" type="password" style="margin: 60px; padding: 5px; " />
-    <a href="Test.txt" download="Test.txt">
-        <button>Download File</button>
-    </a>
   </div>
 
   <div id="coverLetter" style="text-align: center; display: none">
@@ -159,7 +194,7 @@
 
   <div id="mainDisplay" style="display: none; text-wrap: balance;">
     <section style="text-align: center;">
-      <h1>(desktop1)About Me.</h1>
+      <h1>(D2)About Me.</h1>
       <p>
         I've spent a good part of my life developing skills to become the go-to person when it comes to creative problem-solving. I do my best work under creative restraints and love to push the boundaries of what is perceived as "possible". Nothing beats the "did that just work?" feeling you get when creating!
       </p>
@@ -202,6 +237,11 @@
       - No one has ever been successful at giving me a low-five.<br>
       - My favorite color is <span style="color: #ff4f00">#ff4f00</span>.<p>
     </section>
+
+    <a href="Test.txt" download="Test.txt" id="downloadButton" class="styled-download-button">
+        Download Resume
+      </a>
+      
   </div>
 
   <script>
