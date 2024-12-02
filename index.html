@@ -38,21 +38,24 @@
     }
     #mainDisplay {
       display: none;
-      width: 85%;
+      width: 90%;
       margin: auto;
       opacity: 0;
       animation-name: fadeIn;
       animation-duration: 2.5s;
       animation-fill-mode: forwards;
     }
+
     .content {
-      width: 70%;
+      width: 80%;
       margin: auto;
     }
+
     .password {
       padding: 5px 20px;
       margin: 20px;
     }
+
     section {
       padding: 5px 20px;
       margin: 20px;
@@ -60,22 +63,27 @@
       border-radius: 20px;
       transition: background-color 0.3s, color 0.3s;
     }
+
     section:hover {
       background-color: black;
       color: white;
     }
+
     body.old-computer {
       background-color: black;
       color: lime;
     }
+
     body.old-computer section {
       outline: 2px solid lime;
     }
+
     body.old-computer section:hover {
       background-color: lime;
       color: black;
       border: 2px solid lime;
     }
+
     .toggle-button {
       font-size: 20px;
       background: none;
@@ -87,9 +95,11 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
     body.old-computer .toggle-button {
       color: lime;
     }
+
     .seeMore {
       width: 80px;
       margin: auto;
@@ -99,6 +109,7 @@
       display: inline-block;
       animation: wiggle 10s infinite;
     }
+    
     @keyframes wiggle {
       0%, 9% {
         transform: rotate(0deg);
@@ -131,7 +142,7 @@
 
   <div id="passwordContainer" style="text-align: center; padding: 40px; display: block">
     <h2 id="passwordLabel">Please enter password...</h2>
-    <input id="passwordInput" type="password" style="margin: 60px; padding: 5px" />
+    <input id="passwordInput" type="password" style="margin: 60px; padding: 5px; " />
   </div>
 
   <div id="coverLetter" style="text-align: center; display: none">
@@ -142,8 +153,8 @@
     <section class="seeMore">Enter</section>
   </div>
 
-  <div id="mainDisplay" style="display: none; width: 60%">
-    <section>
+  <div id="mainDisplay" style="display: none; text-wrap: balance;  font-size: calc(40vw / 20)">
+    <section style="text-align: center;">
       <h1>About Me.</h1>
       <p>
         I've spent a good part of my life developing skills to become the go-to person when it comes to creative problem-solving. I do my best work under creative restraints and love to push the boundaries of what is perceived as "possible". Nothing beats the "did that just work?" feeling you get when creating!
@@ -151,55 +162,41 @@
     </section>
     <section>
       <h1>Work History.</h1>
-      <ul>
-        <li><strong>Gemini Inc. | Layout Help Desk | June 2018 - Present</strong>
-          <ul>
-            <li>Design Consultant for internal and external customers.</li>
-            <li>Automation and Continuous Improvement enthusiast.</li>
-            <li>Involvement in 4 <i>"Improvements of the Month"</i> awards.</li>
-            <li>Designer of the Sheron Winel Award.</li>
-          </ul>
-        </li>
+        <strong>Gemini Inc. | Layout Help Desk | June 2018 - Present</strong><br>
+            - Design Consultant for internal and external customers. <br>
+            - Automation and Continuous Improvement enthusiast.<br>
+            - Involvement in 4 <i>"Improvements of the Month"</i> awards.<br>
+            - Designer of the Sheron Winel Award.<br>
         <br>
-        <li><strong>Stan's Main Street | General Manager | May 2014 - October 2017</strong>
-          <ul>
-            <li>Ran day-to-day restaurant operations.</li>
-            <li>Conducted interviews and managed 25+ staff members.</li>
-            <li>Booked musical acts and planned community events and fundraisers.</li>
-            <li>Implemented Lean practices to increase productivity and customer satisfaction.</li>
-          </ul>
-        </li>
+        <strong>Stan's Main Street | General Manager | May 2014 - Oct 2017</strong><br>
+            - Ran day-to-day restaurant operations.<br>
+            - Conducted interviews and managed 25+ staff members.<br>
+            - Booked musical acts and entertainment.<br>
+            - Planned community events and fundraisers.<br>
+            - increase productivity through implemented of Lean practices.<br>
         <br>
-        <li><strong>Freelance Designer | 2010 - Present</strong>
-          <ul>
-            <li>Graphic Design</li>
-            <li>Motion Graphics</li>
-            <li>Video Production</li>
-            <li>3D Design</li>
-          </ul>
-        </li>
-      </ul>
+        <strong>Freelance Designer | 2010 - Present</strong><br>
+            - Graphic Design<br>
+            - Motion Graphics<br>
+            - Video Production<br>
+            - 3D Design<p>
     </section>
     <section>
-      <h1>Projects.</h1>
-      <ul>
-        <li>Gemini - SigmaNest to Carveco transition</li>
-        <li>Gemini - SharePoint file migration</li>
-        <li>The Boring Company - Not a flamethrower.</li>
-        <li>McDonald's - Juice Wrld Unlimited Archcard.</li>
-        <li>U.S. NAVY - Littoral Combat Ship on-board signage.</li>
-        <li>Tito's x Traeger - Identification Plate for crossover grill.</li>
-        <li>Augusta National Golf Club - Champions Locker Room tags.</li>
-      </ul>
+      <h1>Projects.</h1><br>
+        - Gemini - SigmaNest to Carveco transition<br>
+        - Gemini - SharePoint file migration<br>
+        - The Boring Company - Not a flamethrower.<br>
+        - McDonald's - Juice Wrld Unlimited Archcard.<br>
+        - U.S. NAVY - Littoral Combat Ship on-board signage.<br>
+        - Tito's x Traeger - Grill ID Plate.<br>
+        - Augusta National Golf Club - Champions Locker Room tags.<p>
     </section>
     <section>
-      <h1>Fun Facts.</h1>
-      <ul>
-        <li>I am scuba certified.</li>
-        <li>I've been to over 300 Dallas Stars games.</li>
-        <li>No one has ever been successful at giving me a low-five.</li>
-        <li>My favorite color is <span style="color: #ff4f00">#ff4f00</span>.</li>
-      </ul>
+      <h1>Fun Facts.</h1><br>
+      - I am scuba certified.<br>
+      - I've been to over 300 Dallas Stars games.<br>
+      - No one has ever been successful at giving me a low-five.<br>
+      - My favorite color is <span style="color: #ff4f00">#ff4f00</span>.<p>
     </section>
   </div>
 
